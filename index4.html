@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>const/let/var/テンプレートリテラル/</title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    {
+      const man = [
+        { name: 'Jon' },
+        { title: 'Webアプリケーションエンジニア' },
+        { salary: 10000 },
+      ];
+      console.log(man[2]);
+
+      function count(targetString) {
+        const characters = ['a', 'e', 'i', 'o', 'u'];
+        let number = 0;
+
+        for (let i = 0; i < targetString.length; i++) {
+          if (characters.includes(targetString[i])) {
+            number++;
+          }
+        }
+         console.log(number);
+      }
+      count('fgiuafakfjagfiiuoalhkfah');
+      //------------------テンプレートリテラル-------------------
+      function getMessage(){
+        const year = new Date().getFullYear();
+        const month = new Date().getMonth()
+        const day = new Date().getDate();
+        return console.log(`今年は${year}年${month + 1}月${day}日です`);
+      }
+      getMessage();
+    }
+  </script>
+</body>
+
+</html>
